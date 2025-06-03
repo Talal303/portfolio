@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
+      <!-- AOS CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(120deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        .navbar-brand {
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 2px;
+            font-size: 2rem;
+        }
+        .nav-link {
+            font-size: 1.1rem;
+            margin-left: 10px;
+            transition: color 0.2s;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: #0d6efd !important;
+        }
+        .center-home {
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .welcome-box {
+            background: rgba(255,255,255,0.95);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(13,110,253,0.10);
+            padding: 50px 30px;
+            text-align: center;
+        }
+        .welcome-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #0d6efd;
+            margin-bottom: 20px;
+        }
+        .welcome-desc {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 32px;
+        }
+        .welcome-btn {
+            margin: 0 10px 10px 10px;
+            padding: 12px 32px;
+            font-size: 1.1rem;
+            border-radius: 30px;
+            box-shadow: 0 4px 16px rgba(13,110,253,0.08);
+            transition: background 0.2s;
+        }
+        .welcome-btn:hover {
+            background: #0b5ed7;
+            color: #fff;
+        }
+        @media (max-width: 600px) {
+            .welcome-box { padding: 30px 10px; }
+            .welcome-title { font-size: 1.5rem; }
+        }
+        .hero-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #222;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+        .hero-title span {
+            color: #0d6efd;
+        }
+        .hero-desc {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 18px;
+        }
+        .hero-btn {
+            padding: 12px 32px;
+            font-size: 1.1rem;
+            border-radius: 30px;
+            box-shadow: 0 4px 16px rgba(13,110,253,0.08);
+            transition: background 0.2s;
+        }
+        .hero-btn:hover {
+            background: #0b5ed7;
+        }
+        .hero-img {
+            max-width: 350px;
+            width: 100%;
+            border-radius: 50%;
+            box-shadow: 0 8px 32px rgba(13,110,253,0.10);
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0);}
+            50% { transform: translateY(-18px);}
+        }
+        @media (max-width: 991px) {
+            .hero-title { font-size: 2rem; }
+            .hero-img { max-width: 220px; margin-top: 30px; }
+        }
+    </style>
+</head>
+<body>
+     <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm py-3">
+        <div class="container">
+            <a class="navbar-brand" href="#">Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Centered Home Section -->
+    <section class="center-home" id="home">
+        <div class="container">
+            <div class="welcome-box mx-auto">
+                <div class="welcome-title">Welcome to My Portfolio</div>
+                <div class="welcome-desc">
+                    Discover my work, skills, and projects. Let's build something great together!
+                </div>
+                <a href="#about" class="btn btn-primary welcome-btn">About Me</a>
+                <a href="#projects" class="btn btn-outline-warning  welcome-btn">Projects</a>
+                <a href="#services" class="btn btn-primary welcome-btn">Services</a>
+                <a href="#contact" class="btn btn-success welcome-btn">Contact</a>
+            </div>
+        </div>
+    </section>
+
+     <!-- Home Section -->
+    <section class="py-2" id="about">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold" style="font-family: 'Montserrat', sans-serif; color: #0d6efd;">About Me</h2>
+            <div class="row align-items-center justify-content-between">
+                <!-- Text Column -->
+                <div class="col-lg-6">
+                    <h1 class="hero-title">
+                        Hi, I'm <span>Talal Ahmed</span>
+                    </h1>
+                    <p class="hero-desc">
+                        Creative Web Developer specializing in modern, responsive websites. I love building clean, user-friendly interfaces and bringing ideas to life with code.
+                    </p>
+                    <p class="text-muted mb-4">
+                        Explore my projects and let’s connect to create something amazing together!
+                    </p>
+                    <a href="#projects" class="btn btn-primary hero-btn">Veiw Projects</a>
+                </div>
+                <!-- Image Column -->
+                <div class="col-lg-5 text-center">
+                    <img src="/talal.jpg" alt="Talal Ahmed" class="hero-img img-fluid mt-4 mt-lg-0">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+
+    <!-- Services Section -->
+    <section class="py-2" id="services">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold" style="font-family: 'Montserrat', sans-serif; color: #0d6efd;">My Services</h2>
+            <div class="row g-4">
+                <!-- Service Card 1 -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body text-center">
+                            <div class="mb-3">
+                                <span class="bg-primary bg-opacity-10 rounded-circle p-3">
+                                    <svg width="36" height="36" fill="#0d6efd" viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 0 8 8A8 8 0 0 0 8 0zm3.93 6.588-4.39 4.39a.75.75 0 0 1-1.06 0l-2.12-2.12a.75.75 0 1 1 1.06-1.06l1.59 1.59 3.86-3.86a.75.75 0 1 1 1.06 1.06z"/></svg>
+                                </span>
+                            </div>
+                            <h5 class="card-title fw-bold">Web Development</h5>
+                            <p class="card-text text-muted">Modern, responsive websites using HTML, CSS, Bootstrap, and JavaScript for your business or portfolio.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service Card 2 -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body text-center">
+                            <div class="mb-3">
+                                <span class="bg-warning bg-opacity-10 rounded-circle p-3">
+                                    <svg width="36" height="36" fill="#ffc107" viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 0 8 8A8 8 0 0 0 8 0zm3.5 8a.5.5 0 0 1-.5.5H8.5v2.5a.5.5 0 0 1-1 0V8.5H5a.5.5 0 0 1 0-1h2.5V5a.5.5 0 0 1 1 0v2.5H11a.5.5 0 0 1 .5.5z"/></svg>
+                                </span>
+                            </div>
+                            <h5 class="card-title fw-bold">UI/UX Design</h5>
+                            <p class="card-text text-muted">Attractive and user-friendly interface designs to make your website stand out and easy to use.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service Card 3 -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body text-center">
+                            <div class="mb-3">
+                                <span class="bg-success bg-opacity-10 rounded-circle p-3">
+                                    <svg width="36" height="36" fill="#198754" viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 0 8 8A8 8 0 0 0 8 0zm3.5 8a.5.5 0 0 1-.5.5H8.5v2.5a.5.5 0 0 1-1 0V8.5H5a.5.5 0 0 1 0-1h2.5V5a.5.5 0 0 1 1 0v2.5H11a.5.5 0 0 1 .5.5z"/></svg>
+                                </span>
+                            </div>
+                            <h5 class="card-title fw-bold">SEO Optimization</h5>
+                            <p class="card-text text-muted">Improve your website’s ranking on search engines and reach more people with effective SEO techniques.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+<!-- Projects Section -->
+<section class="py-3" id="projects">
+  <div class="container">
+    <h2 class="text-center mb-5 fw-bold" style="font-family: 'Montserrat', sans-serif; color: #0d6efd;">My Projects</h2>
+    <div class="row g-4">
+      <!-- Project Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="/hero.png" class="card-img-top" alt="Farm Project">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Farm Management System</h5>
+            <p class="card-text text-muted">An efficient platform to monitor crop health, automate irrigation, and manage farm resources effectively.</p>
+            <a href="#" class="btn btn-outline-primary btn-sm">View Details</a>
+          </div>
+        </div>
+      </div>
+      <!-- Project Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="/hero-cloth.jpg" class="card-img-top" alt="Clothing Store Project">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Clothing E-commerce Website</h5>
+            <p class="card-text text-muted">A stylish online store featuring a seamless shopping experience and secure payment integration.</p>
+            <a href="#" class="btn btn-outline-primary btn-sm">View Details</a>
+          </div>
+        </div>
+      </div>
+      <!-- Project Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="/hero.png" class="card-img-top" alt="Farm Analytics Project">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Farm Analytics Dashboard</h5>
+            <p class="card-text text-muted">A comprehensive dashboard providing real-time data analytics and insights to improve farm productivity.</p>
+            <a href="#" class="btn btn-outline-primary btn-sm">View Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Contact Section -->
+<section class="py-3" id="contact">
+  <div class="container">
+    <h2 class="text-center mb-5 fw-bold" style="font-family: 'Montserrat', sans-serif; color: #0d6efd;">Contact Me</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Your Name" required>
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control" placeholder="Your Email" required>
+          </div>
+          <div class="mb-3">
+            <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Footer Start -->
+<footer class="bg-dark text-light pt-5 pb-3 mt-5">
+  <div class="container">
+    <div class="row align-items-center gy-4">
+      <div class="col-md-4 text-center text-md-start">
+        <h4 class="fw-bold mb-2" style="font-family: 'Montserrat', sans-serif;">Talal Ahmed</h4>
+        <p class="mb-1 small">Creative Web Developer</p>
+        <p class="mb-0 small">&copy; 2025 Talal Ahmed. All rights reserved.</p>
+      </div>
+      <div class="col-md-4 text-center">
+        <a href="#home" class="text-light text-decoration-none mx-2">Home</a>
+        <a href="#about" class="text-light text-decoration-none mx-2">About</a>
+        <a href="#services" class="text-light text-decoration-none mx-2">Services</a>
+        <a href="#projects" class="text-light text-decoration-none mx-2">Projects</a>
+        <a href="#contact" class="text-light text-decoration-none mx-2">Contact</a>
+      </div>
+      <div class="col-md-4 text-center text-md-end">
+        <a href="mailto:your@email.com" class="text-light mx-2" title="Email">
+          <svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.708 2.825L15 11.383V5.383zm-.034 7.434-5.966-3.584-5.966 3.584A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.183zM1 11.383l4.708-2.825L1 5.383v6z"/></svg>
+        </a>
+        <a href="https://github.com/" target="_blank" class="text-light mx-2" title="GitHub">
+          <svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.65 7.65 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+        </a>
+        <a href="https://linkedin.com/" target="_blank" class="text-light mx-2" title="LinkedIn">
+          <svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.521-1.247-1.342-1.247-.822 0-1.357.538-1.357 1.247 0 .694.52 1.248 1.327 1.248h.014zm4.908 8.212h2.4V9.359c0-.215.016-.43.08-.584.175-.43.573-.877 1.242-.877.876 0 1.226.662 1.226 1.634v4.862h2.4V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.014a5.6 5.6 0 0 1 .014-.025V6.169h-2.4c.03.7 0 7.225 0 7.225z"/></svg>
+        </a>
+      </div>
+    </div>
+    <hr class="border-secondary my-4">
+    <div class="row">
+      <div class="col text-center small text-secondary">
+        Made with <span style="color:#0d6efd;">&#10084;</span> using Bootstrap 5 &amp; HTML | Designed by Talal Ahmed
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Footer End -->
+
+<!-- Bootstrap JS CDN -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+    
+
+    <!-- Bootstrap JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
